@@ -1,0 +1,137 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%); 
+    --dark-blue: hsl(223, 47%, 23%);
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--pale-blue);
+    font-family: 'Red Hat Display', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    max-width: 400px;
+    background-color: var(--very-pale-blue);
+    border-radius: 20px;
+}
+.container header img {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+.container section {
+    text-align: center;
+    padding: 15px 40px;
+}
+.container section .address h2{
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+.container section .address p {
+    color: var(--desaturated-blue);
+    line-height: 1.5;
+    font-weight: 500;
+}
+.container section .music {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(225deg 100% 94% / 42%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.container section .music .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container section .music .name .info {
+    margin-left: 20px;
+}
+.container section .music .name .info div {
+    color: var(--dark-blue);
+    width: 110px;
+    font-weight: 900;
+}
+.container section .music .name .info p {
+    margin: 5px 20px 0px 0px;
+    color: var(--desaturated-blue);
+    font-weight: 500;
+}
+.container section .music a {
+    color: var(--bright-blue);
+    font-weight: 700;
+}
+.container section .buttons {
+    margin: 10px 0px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    grid-template-columns: 100%;
+}
+.container section .buttons .button1 {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 13px 19px 6px hsl(225deg 11% 80%);
+    font-weight: 700;
+}
+.container section .buttons .button2 {
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    font-weight: 700;
+}
+.container section .music a:hover {
+    text-decoration: none;
+    color: hsl(245deg 83% 68%);
+}
+.container section .buttons .button1:hover {
+    background-color: hsl(245deg 83% 68%);
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+}
+@media (max-width: 357px){
+    body {
+        background-image: url(./images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+    }
+    .container {
+        max-width: 357px;
+    }
+    .container section {
+        text-align: center;
+        padding: 15px 15px;
+    }
+    .container section .music {
+        width: 300px;
+    }
+}
+@media (min-width: 357px) and (max-width: 800px) {
+    .container {
+        max-width: 357px;
+    }
+    .container section {
+        text-align: center;
+        padding: 15px 15px;
+    }
+    .container section .music {
+        width: 300px;
+    }
+}
